@@ -6,7 +6,7 @@ const express = require("express");
 const app = express();
 
 // Define a port to listen on
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 8000;
 
 // Define a single endpoint
 app.get("/", (req, res) => {
