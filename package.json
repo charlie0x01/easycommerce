@@ -4,7 +4,7 @@
   "description": "EasyCommerce provides a ready-to-use backend infrastructure that simplifies the development of e-commerce applications",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon server.js",
+    "dev": "nodemon ./src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,7 +24,12 @@
   },
   "homepage": "https://github.com/charlie0x01/easycommerce-baas#readme",
   "dependencies": {
-    "express": "^4.19.2",
-    "nodemon": "^3.1.3"
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "nodemon": "^3.1.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
   }
 }

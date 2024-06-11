@@ -1,15 +1,15 @@
 // server.js
 // Import the Express module
-const express = require("express");
+import express, { Express, Request, Response} from 'express'
 
 // Create an instance of an Express application
-const app = express();
+const app: Express = express();
 
 // Define a port to listen on
 const PORT = process.env.PORT || 8000;
 
 // Define a single endpoint
-app.get("/", (req, res) => {
+app.get("/", (req: Request, res: Response) => {
   res.send("Welcome to EasyCommerce!");
 });
 
