@@ -1,0 +1,30 @@
+{
+  "name": "easycommerce-baas",
+  "version": "1.0.0",
+  "description": "EasyCommerce provides a ready-to-use backend infrastructure that simplifies the development of e-commerce applications",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charlie0x01/easycommerce-baas.git"
+  },
+  "keywords": [
+    "e-commerce",
+    "backend",
+    "rest-api",
+    "nodejs"
+  ],
+  "author": "Abdullah Tanveer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/charlie0x01/easycommerce-baas/issues"
+  },
+  "homepage": "https://github.com/charlie0x01/easycommerce-baas#readme",
+  "dependencies": {
+    "express": "^4.19.2",
+    "nodemon": "^3.1.3"
+  }
+}
