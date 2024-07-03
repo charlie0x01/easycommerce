@@ -58,7 +58,7 @@
 ## Tech Stack
 
 - **Backend**: Node.js, Express.js
-- **Database**: MongoDB
+- **Database**: MongoDB & MySQL
 - **Language**: TypeScript
 - **Authentication**: JWT (JSON Web Tokens)
 - **Documentation**: Swagger/OpenAPI
