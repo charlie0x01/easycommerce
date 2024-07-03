@@ -64,7 +64,7 @@
 - **Documentation**: Swagger/OpenAPI
 
 ## Git Branching Strategy
-Gitflow is a popular branching strategy that uses two main branches: master and develop.
+Gitflow is a popular branching strategy that uses two main branches: `master` and `develop`.
 
 The `master` branch contains production-ready code, while the `develop` branch contains the latest development code. `Feature` branches are created off the `develop` branch, and when the `feature` is complete, it is merged back into the `develop` branch. When the `develop` branch is ready for release, it is merged into the `master` branch, and a new release is created.
 
