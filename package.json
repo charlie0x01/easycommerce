@@ -30,9 +30,7 @@
     "express": "^4.19.2",
     "mysql2": "^3.10.2",
     "nodemon": "^3.1.4",
-    "reflect-metadata": "^0.2.2",
     "sequelize": "^6.37.3",
-    "sequelize-typescript": "^2.1.6",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.3"
   },
