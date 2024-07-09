@@ -1,6 +1,5 @@
 import { app, PORT } from "./app";
 import { connect } from "./config/database.config";
-import mysql from "mysql2";
 
 // connect database
 export const database = connect();
