@@ -31,6 +31,7 @@
   - User registration and login with secure password handling.
   - JWT-based authentication for protected routes.
   - User profile management (view and update profiles).
+  - User Roles and Permissions
 
 - **Product Management**
   - CRUD operations for products (Create, Read, Update, Delete).
@@ -68,7 +69,7 @@ Gitflow is a popular branching strategy that uses two main branches: `master` an
 The `master` branch contains production-ready code, while the `develop` branch contains the latest development code. `Feature` branches are created off the `develop` branch, and when the `feature` is complete, it is merged back into the `develop` branch. When the `develop` branch is ready for release, it is merged into the `master` branch, and a new release is created.
 
 ## Database Schema Design
-<img src="docs\database schema\easycommerce.drawio.png" alt="database-schema-design" width="600px" >
+<img src="docs\database schema\easycommerce.drawio.png" alt="database-schema-design" >
 
 ## Getting Started
 
