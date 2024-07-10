@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "nodemon --config nodemon.json",
     "test": "jest --coverage",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "migrate": "ts-node ./src/scripts/create.tables.ts"
   },
   "repository": {
     "type": "git",

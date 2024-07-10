@@ -2,15 +2,22 @@ import { DataTypes, Model, Sequelize } from "sequelize";
 
 interface UserAttributes {
   id: number;
-  firstName: string;
-  lastName: string;
+  first_name: string;
+  last_name: string;
+  email: string;
+  password: string;
 }
 
 export default (sequelize: Sequelize) => {
-  class User extends Model<UserAttributes, Omit<UserAttributes,'id'>> implements UserAttributes {
+  class User
+    extends Model<UserAttributes, Omit<UserAttributes, "id">>
+    implements UserAttributes
+  {
     public id!: number;
-    public firstName!: string;
-    public lastName!: string;
+    public first_name!: string;
+    public last_name!: string;
+    public email!: string;
+    public password!: string;
     // readonly properties
     public readonly createdAt!: Date;
     public readonly updatedAt!: Date;
@@ -23,14 +30,23 @@ export default (sequelize: Sequelize) => {
         autoIncrement: true,
         primaryKey: true,
       },
-      firstName: {
+      first_name: {
         type: new DataTypes.STRING(50),
         allowNull: false,
       },
-      lastName: {
+      last_name: {
         type: new DataTypes.STRING(50),
         allowNull: false,
       },
+      email: {
+        type: new DataTypes.STRING(100),
+        allowNull: false
+
+      },
+      password: {
+        type: new DataTypes.STRING(150),
+        allowNull: false
+      }
     },
     {
       tableName: "users",

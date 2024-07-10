@@ -20,16 +20,16 @@ app.get("/", (req: Request, res: Response) => {
 
 app.post("/", async (req: Request, res: Response): Promise<Response> => {
   try {
-    console.log(req?.body);
     // create table, discard the existing one if exists
     await UserModel(database).sync();
     // create user
     const user = await UserModel(database).create({
-      firstName: req?.body?.firstName,
-      lastName: req?.body?.lastName,
+      first_name: req?.body?.firstName,
+      last_name: req?.body?.lastName,
+      email: req?.body?.email,
+      password: req?.body?.password,
     });
 
-    console.log(user.toJSON());
     return res.status(200).json({
       message: "User Registered Successfully",
       success: true,
