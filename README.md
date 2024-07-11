@@ -1,4 +1,4 @@
-<img src="./assets/easy-commerce-logo.png" alt="easy-commerce-logo" width="600px" >
+<img src="./assets/easy-commerce-logo.png" alt="easy-commerce-logo" width="500px" >
 
 ## Overview
 
@@ -28,31 +28,49 @@
 ### Core Features
 
 - **User Management**
-  - User registration and login with secure password handling.
-  - JWT-based authentication for protected routes.
-  - User profile management (view and update profiles).
-  - User Roles and Permissions
+  - [ ] Registration: Allow new users to sign up.
+  - [ ] Authentication: Allow users to log in (e.g., using JWT, OAuth).
+  - [ ] Profile Management: View and update user profile details.
+  - [ ] Role Management: Assign roles (e.g., admin, customer) to users.
+  - [ ] Password Management: Allow users to change or reset their passwords.
 
-- **Product Management**
-  - CRUD operations for products (Create, Read, Update, Delete).
-  - Basic product catalog with search and filtering capabilities.
+- **Orders Management**
+  - [ ] Create Order: Place a new order.
+  - [ ] View Order: View details of a specific order.
+  - [ ] Update Order: Modify an order (e.g., change status, update items).
+  - [ ] Cancel Order: Allow users to cancel an order.
+  - [ ] Order History: View all past orders of a user.
 
-- **Order Management**
-  - Shopping cart operations (add, remove items).
-  - Order placement and basic tracking.
+- **Payments**
+  - [ ] Create Payment: Process a payment for an order.
+  - [ ] View Payment: View details of a specific payment.
+  - [ ] Refund Payment: Process a refund for an order.
+  - [ ] Payment History: View all payments made by a user.
+
+- **Inventory Management**
+  - [ ] Add Product: Add a new product to the inventory.
+  - [ ] Update Product: Update details of an existing product.
+  - [ ] Delete Product: Remove a product from the inventory.
+  - [ ] View Products: List all available products.
+  - [ ] Stock Management: Update the stock quantity of products.
+
+- **Categrory Management**
+  - [ ] Add Category: Create a new product category.
+  - [ ] Update Category: Modify an existing category.
+  - [ ] Delete Category: Remove a category.
+  - [ ] View Categories: List all product categories.
+  - [ ] Assign Products to Category: Categorize products.
 
 - **API Documentation**
-  - Comprehensive API documentation with OpenAPI (Swagger).
+  - [ ] Comprehensive API documentation with OpenAPI (Swagger).
 
 ### Future Enhancements
 
-- Advanced admin features (product and order management by admins).
-- Detailed analytics and reporting.
-- Scalability and performance enhancements (caching, load balancing).
-- Advanced security and compliance measures.
-- Automated client SDK generation for multiple platforms.
-- Serverless function integration for specific tasks.
-- Full containerization and deployment with Kubernetes.
+- [ ] Advanced admin features (product and order management by admins or other users).
+- [ ] Detailed analytics and reporting.
+- [ ] Scalability and performance enhancements (caching, load balancing).
+- [ ] Advanced security and compliance measures.
+- [ ] Full containerization and deployment with Kubernetes.
 
 
 ## Tech Stack
@@ -66,10 +84,12 @@
 ## Git Branching Strategy
 Gitflow is a popular branching strategy that uses two main branches: `master` and `develop`.
 
+<img src="./assets/gitflow.svg" alt="database-schema-design" >
+
 The `master` branch contains production-ready code, while the `develop` branch contains the latest development code. `Feature` branches are created off the `develop` branch, and when the `feature` is complete, it is merged back into the `develop` branch. When the `develop` branch is ready for release, it is merged into the `master` branch, and a new release is created.
 
 ## Database Schema Design
-<img src="docs\database schema\easycommerce.drawio.png" alt="database-schema-design" >
+<img src="docs\database schema\easycommerce.drawio.svg" alt="database-schema-design" >
 
 ## Getting Started
 
