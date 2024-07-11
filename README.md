@@ -32,6 +32,7 @@
   - [ ] Authentication: Allow users to log in (e.g., using JWT, OAuth).
   - [ ] Profile Management: View and update user profile details.
   - [ ] Role Management: Assign roles (e.g., admin, customer) to users.
+  - [ ] Permission Management: Allow Operations (e.g., admin, customer) to users.
   - [ ] Password Management: Allow users to change or reset their passwords.
 
 - **Orders Management**
