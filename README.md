@@ -1,4 +1,4 @@
-<img src="./assets/easy-commerce-logo.png" alt="easy-commerce-logo" width="500px" >
+<img src="./assets/easy-commerce-logo.png" alt="easy-commerce-logo" width="550px" >
 
 ## Overview
 
@@ -116,9 +116,17 @@ The `master` branch contains production-ready code, while the `develop` branch c
 
    Create a `.env` file in the root directory and configure the following variables
    ```bash
-   PORT=3000
+   # mysql database
+   DATABASE="database-name"
+   HOST="127.0.0.1"
+   USER="sql-server-username"
+   PASSWORD="your-database-password"
+   # mongodb database
    MONGODB_URI='replace-with-your-mongodb-uri'
+   # json web token secret key
    JWT_SECRET_KEY='replace-with-your-jwt-secret-key'
+   # server port no.
+   PORT=8000
    ```
 4. **Start the backend server**:
    ```bash
