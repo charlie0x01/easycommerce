@@ -1,12 +1,7 @@
 import { DataTypes, Model, Sequelize } from "sequelize";
+import { UserAttributes } from "../utils/interfaces.utils";
 
-interface UserAttributes {
-  id: number;
-  first_name: string;
-  last_name: string;
-  email: string;
-  password: string;
-}
+
 
 export default (sequelize: Sequelize) => {
   class User
@@ -31,22 +26,22 @@ export default (sequelize: Sequelize) => {
         primaryKey: true,
       },
       first_name: {
-        type: new DataTypes.STRING(50),
+        type: new DataTypes.STRING(16),
         allowNull: false,
       },
       last_name: {
-        type: new DataTypes.STRING(50),
+        type: new DataTypes.STRING(16),
         allowNull: false,
       },
       email: {
-        type: new DataTypes.STRING(100),
-        allowNull: false
-
+        type: new DataTypes.STRING(320),
+        allowNull: false,
+        unique: true,
       },
       password: {
-        type: new DataTypes.STRING(150),
-        allowNull: false
-      }
+        type: new DataTypes.STRING(61),
+        allowNull: false,
+      },
     },
     {
       tableName: "users",
