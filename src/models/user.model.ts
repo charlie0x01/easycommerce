@@ -1,11 +1,12 @@
-import { DataTypes, Model, Sequelize } from "sequelize";
+import { DataTypes, Model, Optional, Sequelize } from "sequelize";
 import { UserAttributes } from "../utils/interfaces.utils";
 
-
+interface UserCreationAttributes
+  extends Optional<UserAttributes, "id" | "is_verified"> {}
 
 export default (sequelize: Sequelize) => {
   class User
-    extends Model<UserAttributes, Omit<UserAttributes, "id">>
+    extends Model<UserAttributes, UserCreationAttributes>
     implements UserAttributes
   {
     public id!: number;
@@ -13,6 +14,8 @@ export default (sequelize: Sequelize) => {
     public last_name!: string;
     public email!: string;
     public password!: string;
+    public verification_token!: string;
+    public is_verified!: boolean;
     // readonly properties
     public readonly createdAt!: Date;
     public readonly updatedAt!: Date;
@@ -41,6 +44,14 @@ export default (sequelize: Sequelize) => {
       password: {
         type: new DataTypes.STRING(61),
         allowNull: false,
+      },
+      verification_token: {
+        type: new DataTypes.STRING(65),
+        allowNull: true,
+      },
+      is_verified: {
+        type: new DataTypes.BOOLEAN,
+        defaultValue: false,
       },
     },
     {

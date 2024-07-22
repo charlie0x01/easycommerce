@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width" />
+    <title>Verify Your Email</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+
+      html {
+        height: 99dvh;
+        width: 99dvw;
+      }
+
+      body {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: gainsboro;
+        font-family: "Manrope";
+      }
+
+      .body-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .container {
+        background-color: whitesmoke;
+        width: 500px;
+        height: 390px;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 12px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      }
+
+      .large-font {
+        font-size: 22px;
+        font-weight: 500;
+        color: rgb(59, 59, 59);
+      }
+
+      .medium-font {
+        font-size: 20px;
+        font-weight: 700;
+        color: rgb(59, 59, 59);
+      }
+
+      .btn {
+        padding: 8px;
+        text-align: center;
+        background-color: rgb(59, 59, 59);
+        color: white;
+        border-radius: 8px;
+        cursor: pointer;
+        text-decoration: none;
+        width: 80%;
+      }
+
+      .content-container {
+        width: 80%;
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        color: rgb(70, 69, 69);
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .logo {
+        margin-bottom: 50px;
+      }
+
+      .icon {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="body-container">
+      <img
+        class="logo"
+        src="https://cdn-icons-png.freepik.com/256/2991/2991144.png?ga=GA1.1.1553300945.1720780251&semt=sph"
+        alt="easy-commerce-logo"
+        width="100px"
+      />
+      <div class="container">
+        <div class="content-container">
+          <img
+            class="icon"
+            src="https://cdn-icons-png.freepik.com/256/14826/14826775.png?ga=GA1.1.1553300945.1720780251&semt=ais_hybrid"
+            width="90"
+          />
+          <p class="large-font"><%= heading %></p>
+          <p class="medium-font"><%= username %></p>
+          <hr />
+          <p><%= description %></p>
+          <a href="<%= signInUrl %>" class="btn">Sign In</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
