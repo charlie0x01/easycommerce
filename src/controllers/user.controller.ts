@@ -5,11 +5,10 @@ import { generateHash } from "../utils/bcrypt.utils";
 import { sendMail } from "../services/mail.service";
 import { getEmailVerificationHtmlTemplate } from "../utils/emailTemplates.utils";
 import crypto from "crypto";
-import { Op } from "sequelize";
 
 export const registerUser = async (
   req: Request,
-  res: Response
+  res: Response,
 ): Promise<Response> => {
   try {
     const _user = {
@@ -36,8 +35,8 @@ export const registerUser = async (
     const htmlTemplate = getEmailVerificationHtmlTemplate(
       `${_user?.first_name} ${_user?.last_name}`,
       `${req.protocol}://${req.get(
-        "host"
-      )}/api/user/verify-email?token=${token}`
+        "host",
+      )}/api/user/verify-email?token=${token}`,
     );
     // send verification email to user's given email
     sendMail("", `${_user?.email}`, "Verify Your Email Address", htmlTemplate);
@@ -63,14 +62,12 @@ export const verifyUserEmail = async (req: Request, res: Response) => {
     // find user with given token
     const user = await UserModel(database).findOne({
       where: { verification_token: token },
-
     });
 
     // update is verified from false to true
-    const updateUser = await UserModel(database).update(
-      { is_verified: true },
-      { where: { email: user?.email } }
-    ).then(user => console.log("from then: ", user));
+    const updateUser = await UserModel(database)
+      .update({ is_verified: true }, { where: { email: user?.email } })
+      .then((user) => console.log("from then: ", user));
 
     console.log("Updated User: ", updateUser);
 

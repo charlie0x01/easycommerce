@@ -2,15 +2,38 @@
   <mj-body>
     <mj-section>
       <mj-column>
-        <mj-image width="500px" src="../../../assets/easy-commerce-logo.png"></mj-image>
+        <mj-image
+          width="500px"
+          src="../../../assets/easy-commerce-logo.png"
+        ></mj-image>
         <mj-divider border-color="#ce203b"></mj-divider>
-        <mj-text font-size="18px" font-weight="600" font-family="helvetica">Welcome, <%= it.username %></mj-text>
-        <mj-text font-size="15px">to complete your sign up, please verify you email by clicking below</mj-text>
-        <mj-button href="<%= it.url %>" background-color="#ce203b" font-size="15px" width="80%" padding-top="40px" padding-bottom="40px" >Verify Email</mj-button>
-        <mj-text font-size="15px">or you can copy the link below and paste in your web browser</mj-text>
+        <mj-text font-size="18px" font-weight="600" font-family="helvetica"
+          >Welcome, <%= it.username %></mj-text
+        >
+        <mj-text font-size="15px"
+          >to complete your sign up, please verify you email by clicking
+          below</mj-text
+        >
+        <mj-button
+          href="<%= it.url %>"
+          background-color="#ce203b"
+          font-size="15px"
+          width="80%"
+          padding-top="40px"
+          padding-bottom="40px"
+          >Verify Email</mj-button
+        >
+        <mj-text font-size="15px"
+          >or you can copy the link below and paste in your web browser</mj-text
+        >
         <mj-text font-size="13px" color="#0096FF"><%= it.url %></mj-text>
-        <mj-text font-size="15px" font-weight="bold">NOTE: If you did not create an account, please disregard this email.</mj-text>
-        <mj-text font-size="15px" font-weight="600">The EasyCommerce Team</mj-text>
+        <mj-text font-size="15px" font-weight="bold"
+          >NOTE: If you did not create an account, please disregard this
+          email.</mj-text
+        >
+        <mj-text font-size="15px" font-weight="600"
+          >The EasyCommerce Team</mj-text
+        >
       </mj-column>
     </mj-section>
   </mj-body>

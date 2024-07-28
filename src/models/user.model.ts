@@ -50,14 +50,14 @@ export default (sequelize: Sequelize) => {
         allowNull: true,
       },
       is_verified: {
-        type: new DataTypes.BOOLEAN,
+        type: new DataTypes.BOOLEAN(),
         defaultValue: false,
       },
     },
     {
       tableName: "users",
       sequelize,
-    }
+    },
   );
 
   return User;

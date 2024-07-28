@@ -4,12 +4,12 @@ import mjml2html from "mjml";
 
 export const getEmailVerificationHtmlTemplate = (
   username: string,
-  verificationUrl: string
+  verificationUrl: string,
 ) => {
   try {
     const fileData = readFileSync(
       "src/utils/mjmlTemplates/emailVerification.mjml",
-      "utf-8"
+      "utf-8",
     );
     // if file doesn't have any data
     if (!fileData) return "";

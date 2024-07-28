@@ -17,7 +17,7 @@ export const sendMail = (
   from: string,
   to: string,
   subject: string,
-  html: string
+  html: string,
 ) => {
   const mailOptions: MailOptions = {
     from: from,
