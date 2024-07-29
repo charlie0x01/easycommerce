@@ -19,4 +19,4 @@ COPY . .
 EXPOSE 8000
 
 # Start the app
-CMD ["npm", "run", "dev"]
+CMD ["yarn", "run", "dev"]

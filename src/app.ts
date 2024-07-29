@@ -1,22 +1,38 @@
 // server.js
 // Import the Express module
-import express, { Express, Request, Response } from "express";
+import express, { Express } from "express";
+import cors from "cors";
+// routes
+import userRouter from "./routes/user.routes";
+import path from "path";
+import env from "./utils/env";
+// swagger ui
+import swaggerUi from "swagger-ui-express";
+import swaggerJson from "./swagger/swagger_output.json";
 
 // Create an instance of an Express application
 const app: Express = express();
-app.use(express.json()); // parse request body to json
+
+// parse request body to json
+app.use(express.json());
+
+// handle cross origin requests
+app.use(cors());
+
+// set view engine to ejs
+app.set("view engine", "ejs");
+
+// change default views path (root-directory) to custom path (root-directory/src/views)
+app.set("views", path.join(__dirname, "/views/"));
+app.use(express.static("./public"));
 
 // Define a port to listen on
-const PORT = process.env.PORT || 8000;
+const PORT = env.port;
 
-// Define a single endpoint
-app.get("/", (req: Request, res: Response) => {
-  res.status(200).json({ message: "Welcome to EasyCommerce!", success: true });
-});
+// api routes
+app.use(`${env.apiPrefix}/user`, userRouter);
 
-app.post("/", (req: Request, res: Response) => {
-  console.log(req?.body);
-  res.status(200).json({ message: "Welcome to EasyCommerce!", success: true });
-});
+// api docs
+app.use(`${env.apiPrefix}/docs`, swaggerUi.serve, swaggerUi.setup(swaggerJson));
 
 export { app, PORT };
