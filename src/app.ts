@@ -6,6 +6,9 @@ import cors from "cors";
 import userRouter from "./routes/user.routes";
 import path from "path";
 import env from "./utils/env";
+// swagger ui
+import swaggerUi from "swagger-ui-express";
+import swaggerJson from "./swagger/swagger_output.json";
 
 // Create an instance of an Express application
 const app: Express = express();
@@ -28,5 +31,8 @@ const PORT = env.port;
 
 // api routes
 app.use(`${env.apiPrefix}/user`, userRouter);
+
+// api docs
+app.use(`${env.apiPrefix}/docs`, swaggerUi.serve, swaggerUi.setup(swaggerJson));
 
 export { app, PORT };
