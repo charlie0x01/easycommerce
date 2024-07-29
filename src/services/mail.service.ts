@@ -2,14 +2,15 @@ import dotenv from "dotenv";
 dotenv.config();
 import nodemailer from "nodemailer";
 import { MailOptions } from "nodemailer/lib/smtp-pool";
+import env from "../utils/env";
 
 const transporter = nodemailer.createTransport({
-  host: process.env.MAIL_HOST,
+  host: env.mailHost,
   port: 465,
   secure: true,
   auth: {
-    user: process.env.MAIL_USERNAME,
-    pass: process.env.MAIL_PASSWORD,
+    user: env.mailUsername,
+    pass: env.mailPassword,
   },
 });
 
