@@ -1,17 +1,12 @@
 import dotenv from "dotenv";
 dotenv.config();
 import { Sequelize } from "sequelize";
-
-// database connection details
-const database: string = process.env.DATABASE || "";
-const username: string = process.env.USER || "";
-const password: string = process.env.PASSWORD || "";
-const host: string | undefined = process.env.HOST;
+import env from "../utils/env";
 
 export const connect = (): Sequelize => {
   try {
-    const _connection = new Sequelize(database, username, password, {
-      host: host,
+    const _connection = new Sequelize(env.database, env.user, env.password, {
+      host: env.host,
       dialect: "mysql",
       pool: {
         max: 5,
